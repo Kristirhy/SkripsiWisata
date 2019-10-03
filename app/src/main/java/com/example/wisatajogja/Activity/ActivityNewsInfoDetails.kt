@@ -20,6 +20,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.balysv.materialripple.MaterialRippleLayout
+import com.example.wisatajogja.Data.AppConfig
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
 import com.nostra13.universalimageloader.core.ImageLoader
@@ -84,16 +85,16 @@ class ActivityNewsInfoDetails : AppCompatActivity() {
         actionBar!!.setTitle("")
     }
 
-    private fun prepareAds() {
-        if (AppConfig.ADS_NEWS_DETAILS_BANNER && Tools.cekConnection(applicationContext)) {
-            val mAdView = findViewById(R.id.ad_view) as AdView
-            val adRequest = AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build()
-            // Start loading the ad in the background.
-            mAdView.loadAd(adRequest)
-        } else {
-            (findViewById(R.id.banner_layout) as RelativeLayout).visibility = View.GONE
-        }
-    }
+//    private fun prepareAds() {
+//        if (AppConfig.ADS_NEWS_DETAILS_BANNER && Tools.cekConnection(applicationContext)) {
+//            val mAdView = findViewById(R.id.ad_view) as AdView
+//            val adRequest = AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build()
+//            // Start loading the ad in the background.
+//            mAdView.loadAd(adRequest)
+//        } else {
+//            (findViewById(R.id.banner_layout) as RelativeLayout).visibility = View.GONE
+//        }
+//    }
 
     private fun displayData() {
         (findViewById(R.id.title) as TextView).text = Html.fromHtml(newsInfo.title)
@@ -134,7 +135,7 @@ class ActivityNewsInfoDetails : AppCompatActivity() {
     override fun onResume() {
         if (!imgloader.isInited) Tools.initImageLoader(applicationContext)
         if (webview != null) webview!!.onResume()
-        prepareAds()
+//        prepareAds()
         super.onResume()
     }
 
@@ -160,7 +161,7 @@ class ActivityNewsInfoDetails : AppCompatActivity() {
     }
 
     private fun onBackAction() {
-        if (from_notif) {
+        if (from_notif!!) {
             if (MainActivity.active) {
                 finish()
             } else {

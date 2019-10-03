@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.view.ViewCompat
+import com.example.wisatajogja.Connection.callbacks.CallbackPlaceDetails
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
 import com.google.android.material.floatingactionbutton.FloatingActionButton

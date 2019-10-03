@@ -17,17 +17,18 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.TextView
 import androidx.annotation.LayoutRes
-import androidx.annotation.Nullable
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
+import com.example.wisatajogja.Data.AppConfig
 import com.example.wisatajogja.Data.SharedPref
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
 import com.google.android.material.snackbar.Snackbar
 import com.nostra13.universalimageloader.core.ImageLoader
+import androidx.annotation.Nullable as Nullable1
 
 class ActivitySetting : AppCompatActivity() {
 
@@ -41,7 +42,7 @@ class ActivitySetting : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         addPreferencesFromResource(R.xml.setting_notification)
-        parent_view = findViewById(android.R.id.content) as View
+        parent_view = findViewById<View>(android.R.id.content)
 
         sharedPref = SharedPref(applicationContext)
 
@@ -80,7 +81,7 @@ class ActivitySetting : AppCompatActivity() {
                     imgloader.clearDiskCache()
                     imgloader.clearMemoryCache()
                     Snackbar.make(
-                        parent_view,
+                        parent_view!!,
                         getString(R.string.message_after_clear_image_cache),
                         Snackbar.LENGTH_SHORT
                     ).show()
@@ -265,10 +266,10 @@ class ActivitySetting : AppCompatActivity() {
      */
 
     override fun getSupportActionBar(): ActionBar {
-        return getDelegate().supportActionBar
+        return getDelegate().supportActionBar!!
     }
 
-    fun setSupportActionBar(@Nullable toolbar: Toolbar) {
+    override fun setSupportActionBar(@Nullable1 toolbar: Toolbar?) {
         getDelegate().setSupportActionBar(toolbar)
     }
 
@@ -325,6 +326,6 @@ class ActivitySetting : AppCompatActivity() {
         if (mDelegate == null) {
             mDelegate = AppCompatDelegate.create(this, null)
         }
-        return mDelegate
+        return mDelegate!!
     }
 }

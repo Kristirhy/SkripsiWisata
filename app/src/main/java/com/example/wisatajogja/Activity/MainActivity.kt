@@ -17,6 +17,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.wisatajogja.Data.AppConfig
 import com.example.wisatajogja.Data.SharedPref
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
@@ -173,56 +174,56 @@ class MainActivity : AppCompatActivity() {
 
             R.id.nav_featured -> {
                 fragment = FragmentCategory()
-                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat[10])
+                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat!![10])
                 actionBar!!.setTitle(title)
             }
             R.id.nav_tour -> {
                 fragment = FragmentCategory()
-                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat[0])
+                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat!![0])
                 actionBar!!.setTitle(title)
             }
             R.id.nav_food -> {
                 fragment = FragmentCategory()
-                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat[1])
+                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat!![1])
                 actionBar!!.setTitle(title)
             }
             R.id.nav_hotels -> {
                 fragment = FragmentCategory()
-                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat[2])
+                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat!![2])
                 actionBar!!.setTitle(title)
             }
             R.id.nav_ent -> {
                 fragment = FragmentCategory()
-                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat[3])
+                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat!![3])
                 actionBar!!.setTitle(title)
             }
             R.id.nav_sport -> {
                 fragment = FragmentCategory()
-                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat[4])
+                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat!![4])
                 actionBar!!.setTitle(title)
             }
             R.id.nav_shop -> {
                 fragment = FragmentCategory()
-                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat[5])
+                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat!![5])
                 actionBar!!.setTitle(title)
             }
             R.id.nav_transport -> {
                 fragment = FragmentCategory()
-                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat[6])
+                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat!![6])
             }
             R.id.nav_religion -> {
                 fragment = FragmentCategory()
-                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat[7])
+                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat!![7])
                 actionBar!!.setTitle(title)
             }
             R.id.nav_public -> {
                 fragment = FragmentCategory()
-                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat[8])
+                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat!![8])
                 actionBar!!.setTitle(title)
             }
             R.id.nav_money -> {
                 fragment = FragmentCategory()
-                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat[9])
+                bundle.putInt(FragmentCategory.TAG_CATEGORY, cat!![9])
                 actionBar!!.setTitle(title)
             }
             else -> {

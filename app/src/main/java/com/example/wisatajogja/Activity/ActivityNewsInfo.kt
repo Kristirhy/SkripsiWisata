@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wisatajogja.Adapter.AdapterNewsInfo
+import com.example.wisatajogja.Connection.callbacks.CallbackListNewsInfo
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
 import com.google.android.material.snackbar.Snackbar

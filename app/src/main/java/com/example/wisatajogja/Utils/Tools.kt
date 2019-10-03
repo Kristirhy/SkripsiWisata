@@ -28,6 +28,8 @@ import androidx.appcompat.app.AlertDialog
 import com.example.wisatajogja.Activity.ActivitySplashScreen
 import com.example.wisatajogja.Data.SharedPref
 import com.example.wisatajogja.Activity.MainActivity
+import com.example.wisatajogja.Data.AppConfig
+import com.example.wisatajogja.Data.Constant
 import com.example.wisatajogja.R
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache
 import com.nostra13.universalimageloader.core.DisplayImageOptions

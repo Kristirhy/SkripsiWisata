@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.ProgressBar
 import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
+import com.example.wisatajogja.Connection.RestAdapter
+import com.example.wisatajogja.Connection.callbacks.CallbackDevice
 import com.example.wisatajogja.Data.SharedPref
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
@@ -69,7 +71,7 @@ class ActivitySplashScreen : AppCompatActivity() {
 
     private fun prepareDeviceInfo() {
         progressBar!!.setVisibility(View.VISIBLE)
-        Tools.obtainGcmRegId(this, object : Tools.CallbackRegId() {
+        Tools.obtainGcmRegId(this, object : Tools.CallbackRegId {
             override fun onSuccess(result: DeviceInfo) {
                 // start registration to server
                 if (Tools.cekConnection(applicationContext)) {
