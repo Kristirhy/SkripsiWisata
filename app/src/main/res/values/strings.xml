@@ -66,8 +66,8 @@
     <string name="please_fill">Please fill search input</string>
 
     <!--=== activity Setting =================================================================== -->
-    <string name="developer_name">Dream Space</string>
-    <string name="copyright">Copyright © 2016 Dream Space. \nAll right reserved</string>
+    <string name="developer_name">Kristi Rahayu</string>
+    <string name="copyright">Copyright © 2019 Kristi Rahayu. \nAll right reserved</string>
     <string name="pref_category_notif">Notifications</string>
     <string name="pref_category_display">Display</string>
     <string name="pref_category_other">Others</string>

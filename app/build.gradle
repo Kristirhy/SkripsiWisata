@@ -47,4 +47,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
 
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.google.maps.android:android-maps-utils:0.4.3'
+    implementation 'com.google.android.gms:play-services-gcm:11.8.0'
+    implementation 'com.google.android.gms:play-services-analytics:11.8.0'
+    implementation 'com.google.android.gms:play-services-maps:11.8.0'
 }

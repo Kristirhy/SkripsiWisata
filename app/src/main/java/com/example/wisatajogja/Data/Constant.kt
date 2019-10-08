@@ -13,10 +13,6 @@ class Constant {
     private val PROJECT_API_NUMBER = "107798XXXXXXXXX"
 
 
-    /**
-     * ------------------- DON'T EDIT THIS ---------------------------------------------------------
-     */
-
     // image file url
     fun getURLimgPlace(file_name: String): String {
         return WEB_URL + "uploads/place/" + file_name

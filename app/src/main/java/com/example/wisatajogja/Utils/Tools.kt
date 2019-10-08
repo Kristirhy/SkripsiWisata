@@ -30,7 +30,15 @@ import com.example.wisatajogja.Data.SharedPref
 import com.example.wisatajogja.Activity.MainActivity
 import com.example.wisatajogja.Data.AppConfig
 import com.example.wisatajogja.Data.Constant
+import com.example.wisatajogja.Data.ThisApplication
 import com.example.wisatajogja.R
+import com.google.android.gms.gcm.GoogleCloudMessaging
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import com.google.android.gms.maps.model.CameraPosition
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache
 import com.nostra13.universalimageloader.core.DisplayImageOptions
 import com.nostra13.universalimageloader.core.ImageLoader
