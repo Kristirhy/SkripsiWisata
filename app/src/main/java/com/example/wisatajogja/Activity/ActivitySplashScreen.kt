@@ -10,6 +10,7 @@ import com.example.wisatajogja.Connection.RestAdapter
 import com.example.wisatajogja.Connection.callbacks.CallbackDevice
 import com.example.wisatajogja.Data.SharedPref
 import com.example.wisatajogja.R
+import com.example.wisatajogja.Utils.PermissionUtil
 import com.example.wisatajogja.Utils.Tools
 import retrofit2.Call
 import retrofit2.Response

@@ -33,7 +33,7 @@ class AdapterSuggestionSearch : RecyclerView.Adapter<AdapterSuggestionSearch.Vie
         }
     }
 
-    fun setOnItemClickListener(onItemClickListener: AdapterView.OnItemClickListener) {
+    fun setOnItemClickListener(onItemClickListener: OnItemClickListener) {
         this.onItemClickListener = onItemClickListener
     }
 

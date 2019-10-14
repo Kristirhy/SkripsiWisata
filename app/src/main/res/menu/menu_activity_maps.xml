@@ -13,48 +13,56 @@
                 android:title="@string/title_nav_all"
                 app:showAsAction="never" />
             <item
-                android:id="@+id/nav_featured"
-                android:title="@string/title_nav_featured"
+                android:id="@+id/nav_pilihan"
+                android:title="@string/title_nav_pilihan"
                 app:showAsAction="never"/>
             <item
-                android:id="@+id/nav_tour"
-                android:title="@string/title_nav_tour"
+                android:id="@+id/nav_alam"
+                android:title="@string/title_nav_alam"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/nav_sejarah"
+                android:title="@string/title_nav_sejarah"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/nav_air"
+                android:title="@string/title_nav_air"
                 app:showAsAction="never" />
             <item
                 android:id="@+id/nav_food"
                 android:title="@string/title_nav_food"
                 app:showAsAction="never" />
             <item
-                android:id="@+id/nav_hotels"
-                android:title="@string/title_nav_hotels"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/nav_ent"
-                android:title="@string/title_nav_ent"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/nav_sport"
-                android:title="@string/title_nav_sport"
+                android:id="@+id/nav_edukasi"
+                android:title="@string/title_nav_edukasi"
                 app:showAsAction="never" />
             <item
                 android:id="@+id/nav_shop"
                 android:title="@string/title_nav_shop"
                 app:showAsAction="never" />
             <item
-                android:id="@+id/nav_transport"
-                android:title="@string/title_nav_transport"
-                app:showAsAction="never" />
-            <item
                 android:id="@+id/nav_religion"
                 android:title="@string/title_nav_religion"
                 app:showAsAction="never" />
             <item
-                android:id="@+id/nav_public"
-                android:title="@string/title_nav_public"
+                android:id="@+id/nav_transport"
+                android:title="@string/title_nav_transport"
                 app:showAsAction="never" />
             <item
-                android:id="@+id/nav_money"
-                android:title="@string/title_nav_money"
+                android:id="@+id/nav_hotels"
+                android:title="@string/title_nav_hotels"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/nav_sport"
+                android:title="@string/title_nav_sport"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/nav_publik"
+                android:title="@string/title_nav_publik"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/nav_oleh"
+                android:title="@string/title_nav_oleh"
                 app:showAsAction="never" />
         </menu>
 

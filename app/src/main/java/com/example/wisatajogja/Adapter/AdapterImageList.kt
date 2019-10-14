@@ -8,6 +8,7 @@ import android.widget.AdapterView
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.balysv.materialripple.MaterialRippleLayout
+import com.example.wisatajogja.Data.Constant
 import com.example.wisatajogja.R
 import com.nostra13.universalimageloader.core.ImageLoader
 import java.util.ArrayList
@@ -31,7 +32,7 @@ class AdapterImageList : RecyclerView.Adapter<AdapterImageList.ViewHolder>() {
         }
     }
 
-    fun setOnItemClickListener(onItemClickListener: AdapterView.OnItemClickListener) {
+    fun setOnItemClickListener(onItemClickListener: OnItemClickListener) {
         this.onItemClickListener = onItemClickListener
     }
 

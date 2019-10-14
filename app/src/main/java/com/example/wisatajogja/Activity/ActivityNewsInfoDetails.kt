@@ -21,9 +21,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.balysv.materialripple.MaterialRippleLayout
 import com.example.wisatajogja.Data.AppConfig
+import com.example.wisatajogja.Data.Constant
+import com.example.wisatajogja.Data.ThisApplication
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
 import com.nostra13.universalimageloader.core.ImageLoader
+import kotlinx.android.synthetic.main.item_place.view.*
 import java.util.ArrayList
 
 class ActivityNewsInfoDetails : AppCompatActivity() {
@@ -77,7 +80,7 @@ class ActivityNewsInfoDetails : AppCompatActivity() {
     }
 
     private fun initToolbar() {
-        toolbar = findViewById(R.id.toolbar) as Toolbar
+        toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         actionBar = supportActionBar
         actionBar!!.setDisplayHomeAsUpEnabled(true)
@@ -99,7 +102,8 @@ class ActivityNewsInfoDetails : AppCompatActivity() {
     private fun displayData() {
         (findViewById(R.id.title) as TextView).text = Html.fromHtml(newsInfo.title)
 
-        webview = findViewById(R.id.content) as WebView
+        webview = findViewById(R.id.content)
+//                as WebView
         var html_data = "<style>img{max-width:100%;height:auto;} iframe{width:100%;}</style> "
         html_data += newsInfo.full_content
         webview!!.getSettings().javaScriptEnabled = true
@@ -115,7 +119,8 @@ class ActivityNewsInfoDetails : AppCompatActivity() {
         (findViewById(R.id.date) as TextView).setText(Tools.getFormattedDate(newsInfo.last_update))
         imgloader.displayImage(
             Constant.getURLimgNews(newsInfo.image),
-            findViewById(R.id.image) as ImageView
+            findViewById(R.id.image)
+//                    as ImageView
         )
 
         (findViewById(R.id.lyt_image) as MaterialRippleLayout).setOnClickListener {

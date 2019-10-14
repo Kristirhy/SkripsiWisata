@@ -21,17 +21,20 @@
     <string name="title_nav_fav">Favorite</string>
     <string name="title_nav_news">Berita Terbaru</string>
 
-    <string name="title_nav_featured">Wisata Pilihan</string>
-    <string name="title_nav_tour">Wisata Alam</string>
+    <string name="title_nav_pilihan">Wisata Pilihan</string>
+    <string name="title_nav_alam">Wisata Alam</string>
+    <string name="title_nav_sejarah">Wisata Sejarah</string>
+    <string name="title_nav_air">Wisata Air</string>
     <string name="title_nav_food">Wisata Kuliner</string>
-    <string name="title_nav_hotels">Penginapan</string>
-    <string name="title_nav_ent">Entertainment</string>
-    <string name="title_nav_sport">Sarana Olahraga</string>
+    <string name="title_nav_edukasi">Wisata Edukasi</string>
     <string name="title_nav_shop">Wisata Belanja</string>
-    <string name="title_nav_transport">Transportation</string>
     <string name="title_nav_religion">Tempat Ibadah</string>
-    <string name="title_nav_public">Layanan Publik</string>
-    <string name="title_nav_money">Money</string>
+    <string name="title_nav_transport">Transportasi</string>
+    <string name="title_nav_hotels">Penginapan</string>
+    <string name="title_nav_sport">Sarana Olahraga</string>
+    <string name="title_nav_publik">Layanan Publik</string>
+    <string name="title_nav_oleh">Oleh-oleh</string>
+
 
     <!--=== activity FullScreenImage =========================================================== -->
     <string name="image_of">%1$d of %2$d</string>

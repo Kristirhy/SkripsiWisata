@@ -16,6 +16,9 @@ import com.example.wisatajogja.Activity.ActivityNewsInfoDetails
 import com.example.wisatajogja.Activity.ActivityPlaceDetails
 import com.example.wisatajogja.Activity.ActivitySplashScreen
 import com.example.wisatajogja.Data.Constant
+import com.example.wisatajogja.Model.GcmNotif
+import com.example.wisatajogja.Model.NewsInfo
+import com.example.wisatajogja.Model.Place
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
 import com.google.android.gms.gcm.GoogleCloudMessaging
@@ -55,7 +58,7 @@ class GcmIntentService : IntentService() {
                     place_str,
                     Place::class.java!!
                 ) else null
-                gcmNotif.setPlace(p)
+                gcmNotif.setPlace(p!!)
 
                 // load data news_info if exist
                 val news_str = intent.getStringExtra("news")
@@ -63,7 +66,7 @@ class GcmIntentService : IntentService() {
                     news_str,
                     NewsInfo::class.java!!
                 ) else null
-                gcmNotif.setNews(n)
+                gcmNotif.setNews(n!!)
                 loadRetryImageFromUrl(gcmNotif, object : CallbackImageNotif {
                     override fun onSuccess(bitmap: Bitmap?) {
                         displayNotificationIntent(gcmNotif, bitmap)
@@ -116,9 +119,9 @@ class GcmIntentService : IntentService() {
     private fun loadRetryImageFromUrl(gcmNotif: GcmNotif, callback: CallbackImageNotif) {
         var url = ""
         if (gcmNotif.getPlace() != null) {
-            url = Constant.getURLimgPlace(gcmNotif.getPlace().image)
+            url = Constant.getURLimgPlace(gcmNotif!!.getPlace()!!.image)
         } else if (gcmNotif.getNews() != null) {
-            url = Constant.getURLimgNews(gcmNotif.getNews().image)
+            url = Constant.getURLimgNews(gcmNotif!!.getNews()!!.image)
         } else {
             callback.onFailed()
             return

@@ -19,6 +19,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.wisatajogja.Data.AppConfig
 import com.example.wisatajogja.Data.SharedPref
+import com.example.wisatajogja.Fragment.FragmentCategory
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -275,7 +276,7 @@ class MainActivity : AppCompatActivity() {
             Tools.systemBarLolipop(this)
         }
         if (nav_header_lyt != null) {
-            nav_header_lyt!!.setBackgroundColor(Tools.colorBrighter(sharedPref.getThemeColorInt()))
+            nav_header_lyt!!.setBackgroundColor(Tools.colorBrighter(sharedPref!!.getThemeColorInt()))
         }
         super.onResume()
     }

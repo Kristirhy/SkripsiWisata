@@ -5,6 +5,10 @@ import android.location.Location
 import android.util.Log
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
+import com.google.android.gms.analytics.GoogleAnalytics
+import com.google.android.gms.analytics.HitBuilders
+import com.google.android.gms.analytics.StandardExceptionParser
+import com.google.android.gms.analytics.Tracker
 
 class ThisApplication : Application() {
 

@@ -82,7 +82,7 @@ class FragmentCategory : Fragment() {
         adapter = AdapterPlaceGrid(activity, recyclerView, ArrayList<Place>())
         recyclerView!!.setAdapter(adapter)
         // on item list clicked
-        adapter!!.setOnItemClickListener(object : AdapterPlaceGrid.OnItemClickListener() {
+        adapter!!.setOnItemClickListener(object : AdapterPlaceGrid.OnItemClickListener {
             override fun onItemClick(v: View, obj: Place) {
                 ActivityPlaceDetails.navigate(
                     activity as MainActivity,
@@ -148,7 +148,7 @@ class FragmentCategory : Fragment() {
     private fun startLoadMoreAdapter() {
         adapter!!.resetListData()
         val items = db.getPlacesByPage(category_id, Constant.LIMIT_LOADMORE, 0)
-        adapter.insertData(items)
+        adapter!!.insertData(items)
         showNoItemView()
         val item_count = db.getPlacesSize(category_id) as Int
         // detect when scroll reach bottom

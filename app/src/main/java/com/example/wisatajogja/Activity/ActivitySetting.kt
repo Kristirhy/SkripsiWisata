@@ -23,8 +23,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import com.example.wisatajogja.Data.AppConfig
+import com.example.wisatajogja.Data.Constant
 import com.example.wisatajogja.Data.SharedPref
+import com.example.wisatajogja.Data.ThisApplication
 import com.example.wisatajogja.R
+import com.example.wisatajogja.Utils.PermissionUtil
 import com.example.wisatajogja.Utils.Tools
 import com.google.android.material.snackbar.Snackbar
 import com.nostra13.universalimageloader.core.ImageLoader

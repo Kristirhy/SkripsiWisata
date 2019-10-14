@@ -5,6 +5,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import com.example.wisatajogja.Adapter.AdapterFullScreenImage
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
 import com.nostra13.universalimageloader.core.ImageLoader
@@ -32,7 +33,7 @@ class ActivityFullScreenImage : AppCompatActivity() {
         val position = i.getIntExtra(EXTRA_POS, 0)
         items = i.getStringArrayListExtra(EXTRA_IMGS)
         adapter = AdapterFullScreenImage(this@ActivityFullScreenImage, items)
-        val total = adapter.getCount()
+        val total = adapter!!.getCount()
         viewPager!!.setAdapter(adapter)
 
         text_page!!.setText(String.format(getString(R.string.image_of), position + 1, total))

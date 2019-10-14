@@ -31,6 +31,9 @@ import com.example.wisatajogja.Activity.MainActivity
 import com.example.wisatajogja.Data.AppConfig
 import com.example.wisatajogja.Data.Constant
 import com.example.wisatajogja.Data.ThisApplication
+import com.example.wisatajogja.Model.DeviceInfo
+import com.example.wisatajogja.Model.NewsInfo
+import com.example.wisatajogja.Model.Place
 import com.example.wisatajogja.R
 import com.google.android.gms.gcm.GoogleCloudMessaging
 import com.google.android.gms.maps.CameraUpdateFactory

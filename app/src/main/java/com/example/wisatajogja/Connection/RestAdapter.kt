@@ -1,8 +1,10 @@
 package com.example.wisatajogja.Connection
 
 import com.example.wisatajogja.BuildConfig
+import com.example.wisatajogja.Data.Constant
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit

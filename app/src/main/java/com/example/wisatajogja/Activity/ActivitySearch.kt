@@ -15,6 +15,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.wisatajogja.Adapter.AdapterPlaceGrid
+import com.example.wisatajogja.Adapter.AdapterSuggestionSearch
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
 import java.util.ArrayList
@@ -46,14 +48,19 @@ class ActivitySearch : AppCompatActivity() {
     }
 
     private fun initComponent() {
-        lyt_suggestion = findViewById(R.id.lyt_suggestion) as LinearLayout
-        et_search = findViewById(R.id.et_search) as EditText
+        lyt_suggestion = findViewById(R.id.lyt_suggestion)
+//                as LinearLayout
+        et_search = findViewById(R.id.et_search)
+//                as EditText
         et_search!!.addTextChangedListener(textWatcher)
 
-        bt_clear = findViewById(R.id.bt_clear) as ImageButton
+        bt_clear = findViewById(R.id.bt_clear)
+//                as ImageButton
         bt_clear!!.setVisibility(View.GONE)
-        recyclerView = findViewById(R.id.recyclerView) as RecyclerView
-        recyclerSuggestion = findViewById(R.id.recyclerSuggestion) as RecyclerView
+        recyclerView = findViewById(R.id.recyclerView)
+//                as RecyclerView
+        recyclerSuggestion = findViewById(R.id.recyclerSuggestion)
+//                as RecyclerView
 
         recyclerView!!.setLayoutManager(
             StaggeredGridLayoutManager(
@@ -75,10 +82,10 @@ class ActivitySearch : AppCompatActivity() {
 
         //set data and list adapter
         mAdapter = AdapterPlaceGrid(this, recyclerView, ArrayList<Place>())
-        recyclerView.setAdapter(mAdapter)
-        mAdapter.setOnItemClickListener(object : AdapterPlaceGrid.OnItemClickListener() {
-            fun onItemClick(v: View, obj: Place) {
-                ActivityPlaceDetail.navigate(
+        recyclerView!!.setAdapter(mAdapter)
+        mAdapter!!.setOnItemClickListener(object : AdapterPlaceGrid.OnItemClickListener() {
+            override fun onItemClick(v: View, obj: Place) {
+                ActivityPlaceDetails.navigate(
                     this@ActivitySearch,
                     v.findViewById(R.id.lyt_content),
                     obj
@@ -90,9 +97,9 @@ class ActivitySearch : AppCompatActivity() {
         mAdapterSuggestion = AdapterSuggestionSearch(this)
         recyclerSuggestion!!.setAdapter(mAdapterSuggestion)
         showSuggestionSearch()
-        mAdapterSuggestion.setOnItemClickListener(object :
-            AdapterSuggestionSearch.OnItemClickListener() {
-            fun onItemClick(view: View, viewModel: String, pos: Int) {
+        mAdapterSuggestion!!.setOnItemClickListener(object :
+            AdapterSuggestionSearch.OnItemClickListener {
+            override fun onItemClick(view: View, viewModel: String, pos: Int) {
                 et_search!!.setText(viewModel)
                 lyt_suggestion!!.setVisibility(View.GONE)
                 hideKeyboard()
@@ -102,7 +109,7 @@ class ActivitySearch : AppCompatActivity() {
 
         bt_clear!!.setOnClickListener(View.OnClickListener {
             et_search!!.setText("")
-            mAdapter.resetListData()
+            mAdapter!!.resetListData()
             showNotFoundView()
         })
 
@@ -125,7 +132,7 @@ class ActivitySearch : AppCompatActivity() {
     }
 
     private fun showSuggestionSearch() {
-        mAdapterSuggestion.refreshItems()
+        mAdapterSuggestion!!.refreshItems()
         lyt_suggestion!!.setVisibility(View.VISIBLE)
     }
 
@@ -135,7 +142,8 @@ class ActivitySearch : AppCompatActivity() {
     }
 
     private fun setupToolbar() {
-        toolbar = findViewById(R.id.toolbar) as Toolbar
+        toolbar = findViewById(R.id.toolbar)
+//                as Toolbar
         setSupportActionBar(toolbar)
         actionBar = supportActionBar
         actionBar!!.setDisplayHomeAsUpEnabled(true)
@@ -184,9 +192,9 @@ class ActivitySearch : AppCompatActivity() {
         showNotFoundView()
         val query = et_search!!.getText().toString().trim { it <= ' ' }
         if (query != "") {
-            mAdapterSuggestion.addSearchHistory(query)
-            mAdapter.resetListData()
-            mAdapter.insertData(Tools.filterItemsWithDistance(this, db.searchAllPlace(query)))
+            mAdapterSuggestion!!.addSearchHistory(query)
+            mAdapter!!.resetListData()
+            mAdapter!!.insertData(Tools.filterItemsWithDistance(this, db.searchAllPlace(query)))
             showNotFoundView()
         } else {
             Toast.makeText(this, R.string.please_fill, Toast.LENGTH_SHORT).show()
@@ -195,7 +203,7 @@ class ActivitySearch : AppCompatActivity() {
 
     private fun showNotFoundView() {
         val lyt_no_item = findViewById(R.id.lyt_no_item) as View
-        if (mAdapter.getItemCount() === 0) {
+        if (mAdapter!!.getItemCount() === 0) {
             recyclerView!!.setVisibility(View.GONE)
             lyt_no_item.visibility = View.VISIBLE
         } else {
