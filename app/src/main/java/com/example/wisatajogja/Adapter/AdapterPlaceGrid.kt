@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.balysv.materialripple.MaterialRippleLayout
 import com.example.wisatajogja.Data.Constant
+import com.example.wisatajogja.Model.Place
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
 import com.nostra13.universalimageloader.core.ImageLoader
@@ -19,7 +20,7 @@ import java.util.ArrayList
 class AdapterPlaceGrid(
     activity: FragmentActivity,
     recyclerView: RecyclerView,
-    arrayList: ArrayList<Any>
+    arrayList: ArrayList<Place>
 ) : RecyclerView {
 
     private val VIEW_ITEM = 1

@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.wisatajogja.Adapter.AdapterPlaceGrid
 import com.example.wisatajogja.Adapter.AdapterSuggestionSearch
+import com.example.wisatajogja.Model.Place
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
 import java.util.ArrayList
@@ -81,7 +82,7 @@ class ActivitySearch : AppCompatActivity() {
         recyclerSuggestion!!.setHasFixedSize(true)
 
         //set data and list adapter
-        mAdapter = AdapterPlaceGrid(this, recyclerView, ArrayList<Place>())
+        mAdapter = AdapterPlaceGrid(this, recyclerView!!, ArrayList<Place>())
         recyclerView!!.setAdapter(mAdapter)
         mAdapter!!.setOnItemClickListener(object : AdapterPlaceGrid.OnItemClickListener() {
             override fun onItemClick(v: View, obj: Place) {

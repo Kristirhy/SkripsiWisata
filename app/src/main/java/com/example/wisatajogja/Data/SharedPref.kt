@@ -13,13 +13,13 @@ class SharedPref {
 
     private val MAX_OPEN_COUNTER = 15
 
-    private val GCM_PREF_KEY = "app.thecity.data.GCM_PREF_KEY"
-    private val SERVER_FLAG_KEY = "app.thecity.data.SERVER_FLAG_KEY"
-    private val THEME_COLOR_KEY = "app.thecity.data.THEME_COLOR_KEY"
+    private val GCM_PREF_KEY = "com.example.wisatajogja.Data.GCM_PREF_KEY"
+    private val SERVER_FLAG_KEY = "com.example.wisatajogja.Data.SERVER_FLAG_KEY"
+    private val THEME_COLOR_KEY = "com.example.wisatajogja.Data.THEME_COLOR_KEY"
     private val LAST_PLACE_PAGE = "LAST_PLACE_PAGE_KEY"
 
     // need refresh
-    val REFRESH_PLACES = "app.thecity.data.REFRESH_PLACES"
+    val REFRESH_PLACES = "com.example.wisatajogja.Data.REFRESH_PLACES"
     internal var context: Context? = null
     private var sharedPreferences: SharedPreferences? = null
 

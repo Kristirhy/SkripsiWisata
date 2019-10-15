@@ -9,6 +9,7 @@ import android.widget.RelativeLayout
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.example.wisatajogja.R
+import com.example.wisatajogja.Widget.TouchImageView
 import com.nostra13.universalimageloader.core.ImageLoader
 
 

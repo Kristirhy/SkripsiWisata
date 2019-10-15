@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wisatajogja.Data.Constant
+import com.example.wisatajogja.Model.NewsInfo
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
 import com.nostra13.universalimageloader.core.ImageLoader

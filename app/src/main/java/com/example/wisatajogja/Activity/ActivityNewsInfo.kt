@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wisatajogja.Adapter.AdapterNewsInfo
 import com.example.wisatajogja.Connection.callbacks.CallbackListNewsInfo
+import com.example.wisatajogja.Model.NewsInfo
 import com.example.wisatajogja.R
 import com.example.wisatajogja.Utils.Tools
+import com.example.wisatajogja.Widget.SpacingItemDecoration
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import java.util.ArrayList
